@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const saleSchema = new Schema(
+const recieptSchema = new Schema(
   {
     name: {
       type: String,
@@ -46,5 +46,5 @@ const saleSchema = new Schema(
   { timestamps: true }
 );
 
-const Sale = mongoose.model('Sale', saleSchema);
-module.exports = Sale;
+const Reciept = mongoose.model('Reciept', recieptSchema);
+module.exports = Reciept;

@@ -1,8 +1,8 @@
 const { express } = require('express');
-const Party = require('../models/Party');
+const Sale = require('../models/Sales');
 
-const addParty = (req, res) => {
-  let party = new Party({
+const addSale = (req, res) => {
+  let sale = new Sale({
     name: req.body.name,
     phoneNumber: req.body.phoneNumber,
     address: req.body.address,
@@ -17,7 +17,7 @@ const addParty = (req, res) => {
     currentStock: req.body.currentStock,
   });
 
-  party
+  sale
     .save()
     .then((user) => {
       res.json({
@@ -32,4 +32,4 @@ const addParty = (req, res) => {
     });
 };
 
-module.exports = { addParty };
+module.exports = { addSale };

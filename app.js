@@ -7,7 +7,9 @@ const port = 3000;
 
 dotenv.config();
 const addPartys = require('./routes/addpartys');
-const { options } = require('./routes/addpartys');
+// const { options } = require('./routes/addpartys');
+const addSales = require('./routes/addsales');
+const addReciept = require('./routes/addReciept');
 
 mongoose.connect(
   process.env.DB_CONNECT,
@@ -26,6 +28,8 @@ mongoose.connect(
 app.use(express.json());
 app.use(cors());
 app.use('/api', addPartys);
+app.use('/api', addSales);
+app.use('/api', addReciept);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
