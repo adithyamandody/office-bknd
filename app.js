@@ -7,6 +7,7 @@ const port = 8009;
 
 dotenv.config();
 const addPartys = require('./routes/addpartys');
+const addDelivery = require('./routes/addDelivery');
 // const { options } = require('./routes/addpartys');
 const addSales = require('./routes/addsales');
 const addReciept = require('./routes/addReciept');
@@ -30,6 +31,7 @@ app.use(cors());
 app.use('/api', addPartys);
 app.use('/api', addSales);
 app.use('/api', addReciept);
+app.use('/api', addDelivery);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
