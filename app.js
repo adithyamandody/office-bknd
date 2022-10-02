@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const port = 3000;
+const port = 8009;
 
 dotenv.config();
 const addPartys = require('./routes/addpartys');
