@@ -6,41 +6,28 @@ const recieptSchema = new Schema(
     name: {
       type: String,
     },
-    phoneNumber: {
+    date: {
+      type: Date,
+      default: Date.now,
+    },
+    amount: {
       type: Number,
     },
-    address: {
-      type: String,
-    },
-    area: {
-      type: String,
-    },
-    discount: {
+    modeoftransaction: {
       type: Number,
     },
-    proof: {
+    transactionno: {
       type: String,
     },
-    idno: {
-      type: String,
-    },
-    deliveryBoy: {
-      type: String,
-    },
-    collectionBoy: {
-      type: String,
-    },
+
     collectionBoy: {
       type: String,
     },
     openingBalance: {
       type: Number,
     },
-    Depocylamo: {
+    closingBalance: {
       type: Number,
-    },
-    currentStock: {
-      type: String,
     },
   },
   { timestamps: true }

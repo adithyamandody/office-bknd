@@ -4,16 +4,17 @@ const Reciept = require('../models/Reciept');
 const addReciept = (req, res) => {
   let reciept = new Reciept({
     name: req.body.name,
-    phoneNumber: req.body.phoneNumber,
-    address: req.body.address,
-    area: req.body.area,
+    date: req.body.date,
+
     discount: req.body.discount,
-    proof: req.body.proof,
-    idno: req.body.idno,
-    deliveryBoy: req.body.deliveryBoy,
+
     collectionBoy: req.body.collectionBoy,
     openingBalance: req.body.openingBalance,
-    Depocylamo: req.body.Depocylamo,
+    closingBalance: req.body.closingBalance,
+
+    amount: req.body.amount,
+    modeoftransaction: req.body.modeoftransaction,
+    transactionno: req.body.transactionno,
     currentStock: req.body.currentStock,
   });
 
