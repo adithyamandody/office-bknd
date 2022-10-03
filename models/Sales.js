@@ -6,41 +6,49 @@ const saleSchema = new Schema(
     name: {
       type: String,
     },
-    phoneNumber: {
+    date: {
+      type: Date,
+      default: Date.now,
+    },
+    full: {
       type: Number,
     },
-    address: {
-      type: String,
+    empty: {
+      type: Number,
     },
-    area: {
-      type: String,
+    mrp: {
+      type: Number,
     },
     discount: {
       type: Number,
     },
-    proof: {
+
+    totalDiscount: {
+      type: Number,
+    },
+    area: {
       type: String,
     },
-    idno: {
-      type: String,
-    },
+
     deliveryBoy: {
       type: String,
     },
-    collectionBoy: {
-      type: String,
-    },
-    collectionBoy: {
-      type: String,
-    },
+
     openingBalance: {
       type: Number,
     },
-    Depocylamo: {
+    closingBalance: {
       type: Number,
     },
     currentStock: {
       type: String,
+    },
+
+    openingOutstanding: {
+      type: String,
+    },
+    totalSale: {
+      type: Number,
     },
   },
   { timestamps: true }

@@ -4,17 +4,23 @@ const Sale = require('../models/Sales');
 const addSale = (req, res) => {
   let sale = new Sale({
     name: req.body.name,
-    phoneNumber: req.body.phoneNumber,
-    address: req.body.address,
+    date: req.body.date,
+    full: req.body.full,
+    empty: req.body.mt,
+    mrp: req.body.mrp,
+
     area: req.body.area,
     discount: req.body.discount,
-    proof: req.body.proof,
-    idno: req.body.idno,
+    totalDiscount: req.body.totalDiscount,
+
     deliveryBoy: req.body.deliveryBoy,
-    collectionBoy: req.body.collectionBoy,
+
     openingBalance: req.body.openingBalance,
-    Depocylamo: req.body.Depocylamo,
+    closingBalance: req.body.closingBalance,
+    openingOutstanding: req.body.openingOutstanding,
+
     currentStock: req.body.currentStock,
+    totalSale: req.body.totalSale,
   });
 
   sale
