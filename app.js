@@ -1,11 +1,15 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const multer = require('multer');
+
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const port = 8009;
 
 dotenv.config();
+app.use(bodyParser.urlencoded({ extended: true }));
 const addPartys = require('./routes/addpartys');
 const addDelivery = require('./routes/addDelivery');
 // const { options } = require('./routes/addpartys');

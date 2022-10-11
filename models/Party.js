@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 const PartySchema = new Schema(
   {
+    img: {
+      data: Buffer,
+      contentType: String,
+    },
     name: {
       type: String,
     },
@@ -30,16 +34,25 @@ const PartySchema = new Schema(
     collectionBoy: {
       type: String,
     },
-    collectionBoy: {
+    closingBalance: {
       type: String,
     },
     openingBalance: {
+      type: Number,
+    },
+    openingStock: {
+      type: Number,
+    },
+    closingStock: {
       type: Number,
     },
     Depocylamo: {
       type: Number,
     },
     currentStock: {
+      type: String,
+    },
+    Product: {
       type: String,
     },
   },
