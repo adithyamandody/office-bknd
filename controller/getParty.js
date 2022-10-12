@@ -1,11 +1,11 @@
-const Party = require('../models/Party');
+const Party = require("../models/Party");
 
 const getParty = (req, res) => {
   Party.find({}, function (err, party) {
     if (err) {
       console.log(err);
     } else {
-      res.json(party);
+      res.json(party.filter((party) => ({ _id: party._id, name: party.name })));
     }
   });
 };
