@@ -1,5 +1,5 @@
-const { express } = require('express');
-const Party = require('../models/Party');
+const { express } = require("express");
+const Party = require("../models/Party");
 
 const addParty = (req, res) => {
   let party = new Party({
@@ -15,19 +15,21 @@ const addParty = (req, res) => {
     openingBalance: req.body.openingBalance,
     Depocylamo: req.body.Depocylamo,
     currentStock: req.body.currentStock,
+    Product: req.body.Product,
+    openingStock: req.body.openingStock,
   });
 
   party
     .save()
     .then((user) => {
       res.json({
-        message: 'jelole success',
+        message: "jelole success",
       });
     })
     .catch((error) => {
       console.log(error);
       res.json({
-        message: 'error',
+        message: "error",
       });
     });
 };

@@ -1,5 +1,5 @@
-const { express } = require('express');
-const Sale = require('../models/Sales');
+const { express } = require("express");
+const Sale = require("../models/Sales");
 
 const addSale = (req, res) => {
   let sale = new Sale({
@@ -17,7 +17,7 @@ const addSale = (req, res) => {
 
     openingBalance: req.body.openingBalance,
     closingBalance: req.body.closingBalance,
-    openingOutstanding: req.body.openingOutstanding,
+    openingStock: req.body.openingStock,
 
     currentStock: req.body.currentStock,
     totalSale: req.body.totalSale,
@@ -27,13 +27,13 @@ const addSale = (req, res) => {
     .save()
     .then((user) => {
       res.json({
-        message: 'jelole success',
+        message: "jelole success",
       });
     })
     .catch((error) => {
       console.log(error);
       res.json({
-        message: 'error',
+        message: "error",
       });
     });
 };
