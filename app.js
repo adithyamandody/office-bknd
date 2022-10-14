@@ -16,6 +16,7 @@ const addDelivery = require('./routes/addDelivery');
 const addSales = require('./routes/addsales');
 const addReciept = require('./routes/addReciept');
 const addArea = require('./routes/addArea');
+const product = require('./routes/addProduct');
 
 mongoose.connect(
   process.env.DB_CONNECT,
@@ -38,6 +39,7 @@ app.use('/api', addSales);
 app.use('/api', addReciept);
 app.use('/api', addDelivery);
 app.use('/api', addArea);
+app.use('/api/', product);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
