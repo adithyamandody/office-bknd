@@ -24,4 +24,14 @@ const addProduct = (req, res) => {
     });
 };
 
-module.exports = { addProduct };
+const getProduct = (req, res) => {
+  Product.find({}, function (err, product) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(product);
+    }
+  });
+};
+
+module.exports = { addProduct, getProduct };
